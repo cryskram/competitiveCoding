@@ -1,21 +1,13 @@
-# not working
-
-
-def duplicate_encode(word: str) -> str:
-    count = 0
-    dum = ""
-    for i in word:
-        for j in word:
-            if i == j:
-                count += 1
-        if count > 2:
-            i = i.replace(i, ")")
+def duplicate_encode(s: str) -> str:
+    d = ""
+    s = s.lower()
+    for i in s:
+        if s.count(i) > 1:
+            d += ")"
         else:
-            i = i.replace(i, "(")
+            d += "("
 
-        dum = dum + i
-
-    return dum
+    return d
 
 
-print(duplicate_encode("Success"))
+print(duplicate_encode("(( @"))

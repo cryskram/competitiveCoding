@@ -1,0 +1,1 @@
+def longest(a1: str, a2: str) -> str
